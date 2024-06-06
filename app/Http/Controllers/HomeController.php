@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Exemplo;
-use Illuminate\Http\Request;
+use App\ConsultaCEP;
+
 
 class HomeController extends Controller
 {
-    public function index(Exemplo $exemplo)
+    public function index(ConsultaCEP $consultaCEP)
     {
-        dd($exemplo);
+        $consultaCEP->consultar('01001000');
     }
 }
