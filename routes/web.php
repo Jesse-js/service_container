@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\Route;
 //     return new \App\Exemplo;
 // });
 
-Route::get('/', function () {
-    $exemplo = app()->make(Exemplo::class);
-
+Route::get('/', function (Exemplo $exemplo) {
+    
     dd($exemplo);
 });
