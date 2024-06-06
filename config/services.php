@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'cep' => [
+        'api_key' => env('API_KEY_CEP', null),
+    ],
+
 ];

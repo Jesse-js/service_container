@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //será executado na primeira fase da inicialização da aplicação
         //esse método é o lugar correto para fazer o bind de classes
-        
+
     }
 
     /**
@@ -22,5 +22,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //só será executado depois que todos os métodos register forem executados
+
     }
 }
