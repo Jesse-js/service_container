@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
+app()->bind('Exemplo', function () {
+    return new \App\Exemplo;
+});
+
 Route::get('/', function () {
-    return view('welcome');
+    $exemplo = app()->make('Exemplo');
+
+    dd($exemplo);
 });
