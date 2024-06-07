@@ -23,6 +23,8 @@ para registrar informações dentro do container já na inicialização do Larav
 para definir configurações da nossa aplicação, ele é executado depois que todos os métodos register
 de todos services providers são executados.
 
+- O método singleton serve para registrar uma classe dentro do container, porém ele tem uma diferença muito importante em comparação ao bind. O método bind faz com que a cada chamada do método make uma nova instância da classe seja criada, isso faz com que existam várias instâncias do mesmo objeto na memória o que pode acabar sobrecarregando a memória e o processamento, por isso o método singleton permite a criação de apenas uma única instância do objeto e a cada chamada do método make ele retornará essa mesma instância. Mas se você precisa de um novo objeto sem o estado perisitido utilize o bind, mas se for um objeto que toda vez você pode chamar ele e utilizar o mesmo ao longo de toda a execução, você pode então utilizar o singleton.
+
 - Usamos o método singleton quando queremos que sempre seja retornada a mesma instância sempre que precisarmos.
 
 Usamos o método bind quando queremos que sempre seja retornada a mesma instância sempre que precisarmos.
