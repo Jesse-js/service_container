@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\ConsultaCEP;
 
+use App\ConsultaCepInterface;
 
 class HomeController extends Controller
 {
-    public function index(ConsultaCEP $consultaCEP)
+    public function index(ConsultaCepInterface $consultaCEP)
     {
-        $instanciaConsultaCep1 = app()->make(ConsultaCEP::class);
-        $instanciaConsultaCep2 = app()->make(ConsultaCEP::class);
-        //$consultaCEP->consultar('01001000');
-        dd($instanciaConsultaCep1, $instanciaConsultaCep2);
+        $consultaCEP->consultar('01001000');
     }
 }

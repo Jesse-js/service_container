@@ -2,7 +2,7 @@
 
 namespace App;
 
-class ConsultaCEP
+class ConsultaCep implements ConsultaCepInterface
 {
     public function __construct(
         private string $apiKey
@@ -10,7 +10,7 @@ class ConsultaCEP
 
     }
 
-    public function consultar(string $cep)
+    public function consultar(string $cep): void
     {
         echo "minha chave: " . $this->apiKey. "<br>";
         echo "meu endereço: " . $cep;
