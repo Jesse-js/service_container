@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\ConsultaCEP;
+use App\ConsultaCepInterface;
+
 class ConsultaCepServiceProvider extends ServiceProvider
 {
     /**
@@ -11,7 +13,7 @@ class ConsultaCepServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind(ConsultaCEP::class, function ($app) {
+        $this->app->singleton(ConsultaCepInterface::class, function ($app) {
             return new ConsultaCEP(config('services.cep.api_key', ''));
         });
     }
